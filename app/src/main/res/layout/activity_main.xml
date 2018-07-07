@@ -5,14 +5,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/homeicon"
+                android:src="@drawable/clock" />
+            <TextView
+                style="@style/hometext"
+                android:text="@string/recently_played"/>
 
+            <ImageView
+                style="@style/homearrow"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/homeicon"
+                android:src="@drawable/download" />
+            <TextView
+                style="@style/hometext"
+                android:text="@string/downloads"/>
+
+            <ImageView
+                style="@style/homearrow"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/homeicon"
+                android:src="@drawable/heart" />
+            <TextView
+                style="@style/hometext"
+                android:text="@string/favorites"/>
+            <ImageView
+                style="@style/homearrow"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/homeicon"
+                android:src="@drawable/musical_note" />
+            <TextView
+                style="@style/hometext"
+                android:text="@string/my_playlist"/>
+
+            <ImageView
+                style="@style/homearrow"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:id="@+id/divider"
         android:layout_above="@+id/music_bar"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-
     <LinearLayout
         android:id="@+id/music_bar"
         android:layout_width="match_parent"
@@ -20,71 +109,55 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_margin="8dp"
+        android:layout_margin="6dp"
         android:layout_alignParentBottom="true">
-
         <LinearLayout
             android:id="@+id/my_music"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_margin="8dp">
-
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
+                style="@style/musicbarimage"
                 android:src="@drawable/music_player" />
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="My Music"
-                android:maxLines="1"
-                android:textAlignment="center" />
+                style="@style/musicbartext"
+                android:text="@string/my_music" />
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/player"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:orientation="vertical">
-
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/play_button" />
-
+                style="@style/musicbarimage"
+                android:src="@drawable/player1" />
             <TextView
-                android:textAlignment="center"
-                android:maxLines="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Player" />
+                style="@style/musicbartext"
+                android:text="@string/player" />
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/online"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_margin="8dp">
-
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
+                style="@style/musicbarimage"
                 android:src="@drawable/online_music" />
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="Online Music"
-                android:textAlignment="center" />
+                style="@style/musicbartext"
+                android:text="@string/online" />
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>
