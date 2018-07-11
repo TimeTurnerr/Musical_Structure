@@ -3,8 +3,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import java.util.ArrayList;
 public class my_music extends AppCompatActivity {
     ArrayList<song> songs = new ArrayList<song>();
@@ -22,7 +24,7 @@ public class my_music extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent my_musicIntent = new Intent(my_music.this, player.class);
-                my_musicIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                my_musicIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP );
                 startActivity(my_musicIntent);
             }
         });
