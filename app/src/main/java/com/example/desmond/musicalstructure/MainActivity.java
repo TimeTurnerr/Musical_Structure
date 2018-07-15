@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         my_music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent my_musicIntent = new Intent(MainActivity.this, my_music.class);
+                Intent my_musicIntent = new Intent(MainActivity.this, MyMusicActivity.class);
                 my_musicIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP );
                 startActivity(my_musicIntent);
             }
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent playerIntent = new Intent(MainActivity.this, player.class);
+                Intent playerIntent = new Intent(MainActivity.this, PlayerActivity.class);
                 playerIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP );
                 startActivity(playerIntent);
             }
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         online.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent onlineIntent = new Intent(MainActivity.this, online.class);
+                Intent onlineIntent = new Intent(MainActivity.this, OnlineActivity.class);
                 onlineIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP );
                 startActivity(onlineIntent);
             }
